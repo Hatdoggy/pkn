@@ -17,8 +17,10 @@
   #spinBtn{
     bottom: 15%;
   }.bg-low{
-    height: 30%;
     align-items: start;
+    #spins,#status,#bal{
+      width: auto!important;
+    }
   }
 }
 

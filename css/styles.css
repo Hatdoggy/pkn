@@ -1037,10 +1037,12 @@ span {
     bottom: 15%;
   }
   .bg-low {
-    height: 30%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+  .bg-low #spins, .bg-low #status, .bg-low #bal {
+    width: auto !important;
   }
 }
 

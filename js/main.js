@@ -194,13 +194,10 @@ const resPop = async ()=>{
 
     $('#statVal').html(mult[curNdx]);
     $('.balVal').html(currency + bal);
+    $('#spinVal').html(spn);
     $('#jckptSymb .balVal').html(currency + bal);
     curNdx = curNdx+1;
-    await delay(4);
-    popTl.play();
     await delay();
-    $('.bg-low').hide();
-    popTl.reverse();
     showPop();
 }
 
@@ -251,7 +248,6 @@ const showPop = ()=>{
         $('#spinBtn').click(async function(){
             $(this).unbind('click')
             spn = spn - 1;
-            $('#spinVal').html(spn);
             await spin()
             resPop();
         })
