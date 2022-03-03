@@ -42,9 +42,16 @@ function getURLParameter(name) {
 
 const {currency,pop,stats,terms} = txt;
 const {greet,win,jckpot,lose} = pop;
-const {spins,balance} = stats;
+const {spins,balance,tot,spnBtn} = stats;
 let curNdx = 0;
 const results = [20,40,10,10,20,80];
+const mult = [
+    `${currency}5 x 4 small size`,
+    `${currency}20 x 2 medium size`,
+    `- ${currency}10 loss`,
+    `-${currency}10 loss`,
+    `${currency}5 x 4 small size`
+];
 let bal = 0,spn = spins.val;
 let headTxt = undefined;
 
@@ -54,6 +61,14 @@ tl.from(".ml", {y: 500, opacity:0, rotation:360, duration: 1},"<");
 tl.from(".br", {x: 500, opacity:0, rotation:180, duration: 1},"<");
 tl.from(".tr", {y: -500, opacity:0, rotation:360, duration: 1},"<");
 tl.pause();
+
+const popTl = gsap.timeline();
+popTl.to('.bg-low',{y:500,opacity:0,duration:1.5})
+popTl.pause();
+
+const scl = gsap.timeline();
+scl.to(".scale", {scale:1.5, duration: .2});
+scl.pause();
 
 // Simple Delay
 const delay = async(val)=>{
@@ -88,9 +103,9 @@ const placeBtn = (width)=>{
     let bound = undefined;
 
     if(width < 1000){
-        bound = $('#back')[0].getBoundingClientRect().y + 10;
+        bound = $('#back')[0].getBoundingClientRect().y + 35;
     }else{
-        bound = $('#back')[0].getBoundingClientRect().y + 30;
+        bound = $('#back')[0].getBoundingClientRect().y + 70;
     }
 
     $('#wheelPnt').css('top',bound+"px");
@@ -120,55 +135,43 @@ const changeColor = (col)=>{
     }
 }
 
-const resPop = (val)=>{
-    
-    $('.bg-pop').show();
-    tl.play();
-    $('#welc').show();
+const resPop = async ()=>{
 
+    console.log(curNdx)
     switch (curNdx) {
         case 0:
-            headTxt = win.head;
-            $('#popBtn').html(win.btn);
-            $('#popTxt').html(win.mes);
             bal = bal + results[curNdx];
         break;
         case 1:
-            $('#popBtn').html(win.btn);
             bal = bal + results[curNdx];
         break;
         case 2:
-            headTxt = lose.head;
-            changeColor()
-            $('#popTxt').html(lose.mes);
-            $('#popBtn').removeClass('btn-ylw');
-            $('#popBtn').addClass('btn-red');
-            $('#popBtn').html(lose.btn);
-            $('#symbol').attr('src','./img/lose.png');
+            $('#statVal').removeClass('txt-ylw');
+            $('#statVal').addClass('txt-red');
+            $('.balVal').removeClass('txt-ylw');
+            $('.balVal').addClass('txt-red');
             bal = bal - results[curNdx];
         break;
         case 3:
-            $('#popBtn').html(lose.mes);
-            $('#popBtn').html(lose.btn);
             bal = bal - results[curNdx];
         break;
         case 4:
-            headTxt = win.head;
+            $('#statVal').removeClass('txt-red');
+            $('#statVal').addClass('txt-ylw');
+            $('.balVal').removeClass('txt-red');
+            $('.balVal').addClass('txt-ylw');
             changeColor(1)
-            $('#popTxt').html(win.mes);
-            $('#popBtn').removeClass('btn-red');
-            $('#popBtn').addClass('btn-ylw');
-            $('#popBtn').html(win.btn);
-            $('#symbol').attr('src','./img/symbol.png');
             bal = bal + results[curNdx];
         break;
         default:
-            headTxt = jckpot.head;
+            $('#popHead').html(jckpot.head);
             $('#popTxt').html(jckpot.mes);
             $('#jckptSymb').show();
             
             $('#popBtn').removeClass('btn-ylw');
             $('#popBtn').addClass('btn-jckpt');
+            $('.balVal').removeClass('txt-ylw');
+            $('.balVal').addClass('txt-drk');
             $('#popBtn').html(jckpot.btn);
             $('#symbol').attr('src','./img/jackpot.png');
             $('#popBtn').click(function(){
@@ -178,14 +181,26 @@ const resPop = (val)=>{
         break;
     }
     
-    if(curNdx <5){
-        $('#popHead').html(headTxt + currency + results[curNdx]);
+    if(curNdx < 5){
+        $('.bg-low').show();
+        scl.play();
+        await delay();
+        scl.reverse();
     }else{
-        $('#popHead').html(headTxt);
+        $('.bg-pop').show();
+        $('#welc').show();
+        tl.play();
     }
-    $('#balVal').html(currency + bal);
-    $('#jckptSymb #balVal').html(currency + bal);
+
+    $('#statVal').html(mult[curNdx]);
+    $('.balVal').html(currency + bal);
+    $('#jckptSymb .balVal').html(currency + bal);
     curNdx = curNdx+1;
+    await delay(4);
+    popTl.play();
+    await delay();
+    $('.bg-low').hide();
+    popTl.reverse();
     showPop();
 }
 
@@ -194,8 +209,13 @@ const setText = ()=>{
     // set Stats
     $('#spinLabel').html(spins.label);
     $('#spinVal').html(spins.val);
-    $('#balLabel').html(balance.label);
-    $('#balVal').html(currency+" "+balance.val);
+    $('.balLabel').html(balance.label);
+    $('.balVal').html(currency+" "+balance.val);
+    $('#statLabel').html(tot.label);
+    $('#statVal').html(tot.val);
+
+    // Spin Button
+    $('#spinBtn').html(spnBtn)
 
     // Welcome Pop
     $('#popHead').html(greet.head);
@@ -207,30 +227,35 @@ const setText = ()=>{
 }
 
 const showPop = ()=>{
-    $('.bg-pop').show();
-    tl.play();
 
-    switch (curNdx) {
-        case 0:
-            // Set popBtn
+    if(curNdx === 0){
+        // Set welcomeBtn
+        $('.bg-pop').show();
+        tl.play();
             $('#popBtn').click(async function(){
                 tl.reverse();
                 $('#welc').fadeOut();
                 await delay();
                 $('.bg-pop').fadeOut();
                 await delay();
-                spn = spn -1;
-                $('#spinVal').html(spn);
-                await spin()
-                resPop();
+                $('#spinBtn').click(async function(){
+                    $(this).unbind('click')
+                    spn = spn -1;
+                    $('#spinVal').html(spn);
+                    await spin()
+                    resPop();
+                })
             })
-        break;
-        case 1:
-        break;
-        default:
-        break;
+    }else{
+        // Set spinBtn
+        $('#spinBtn').click(async function(){
+            $(this).unbind('click')
+            spn = spn - 1;
+            $('#spinVal').html(spn);
+            await spin()
+            resPop();
+        })
     }
-    
 
 }
 

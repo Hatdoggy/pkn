@@ -653,6 +653,14 @@ span {
   color: #1F4219;
 }
 
+.txt-red {
+  color: #FE3535;
+}
+
+.txt-ylw {
+  color: #FEC935;
+}
+
 /* button*/
 .btn {
   padding: 15px;
@@ -687,6 +695,11 @@ span {
   -webkit-box-shadow: 0px 0px 25px #FE3535;
           box-shadow: 0px 0px 25px #FE3535;
   color: white;
+}
+
+.btn-bot {
+  bottom: 2%;
+  width: 30%;
 }
 
 .btn:hover {
@@ -742,6 +755,11 @@ span {
 /* Background */
 .bg-pop {
   background: rgba(0, 0, 0, 0.85);
+}
+
+.bg-low {
+  background: rgba(0, 0, 0, 0.85);
+  bottom: 0;
 }
 
 .bg-img {
@@ -939,11 +957,6 @@ span {
     -webkit-transform: translateY(100px);
             transform: translateY(100px);
   }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-  }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1019,6 +1032,15 @@ span {
   }
   #symbol {
     width: 80%;
+  }
+  #spinBtn {
+    bottom: 15%;
+  }
+  .bg-low {
+    height: 30%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 

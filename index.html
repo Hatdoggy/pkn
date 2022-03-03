@@ -15,7 +15,7 @@
 <body class="bg-img2 ovr-scr-y ovr-xhide flx flx-col flx-jc-ce flx-ai-ce pos-rel">
     
     <!-- Main Container -->
-    <main class="pos-rel w-90 h-80 bg-img flx flx-jc-ce flx-ai-ce m-t-auto">
+    <main class="pos-rel w-90 h-90 bg-img flx flx-col flx-jc-ce flx-ai-ce m-t-auto">
 
         <!-- Wheel -->        
         <img alt="back" src="./img/back.png" id="back" class="fade-t w-55"/>
@@ -23,17 +23,7 @@
         <img alt="btn" src="./img/btn.png" id="wheelBtn" class="fade-t w-10 wheelBtn pos-abs"/>
         <img alt="pnt" src="./img/pointer.png" id="wheelPnt" class="fade-t w-5 wheelPnt pos-abs"/>
 
-        <!-- Stats -->
-        <div class="pos-abs statCont w-50 flx flx-ai-end flx-col">
-            <div id="spins" class="w-40 p-15 m-t-2 txt-drk flx flx-jc-ce flx-ai-ce bg-stat">
-                <p class="robo-bld" id="spinLabel">Spins Left</p>
-                <p class="robo-bld m-l-auto" id="spinVal">6</p>
-            </div>
-            <div id="spins" class="w-40 p-15 m-t-2 txt-drk flx flx-jc-ce flx-ai-ce bg-stat">
-                <p class="robo-bld" id="balLabel">Balance</p>
-                <p class="robo-bld m-l-auto" id="balVal">6</p>
-            </div>
-        </div>
+        <button class="btn btn-ylw robo-bld m-t-2 pos-abs btn-bot z-mid" id="spinBtn">Lorem ipsum</button>
     </main>
 
     <!-- PopUp -->
@@ -41,14 +31,14 @@
         
         
         <!-- Welcome Pop -->
-        <div class="h-80 w-50 p-15 flx flx-col flx-jc-sp flx-ai-ce txt-wht fade-t" id="welc">
+        <div class="h-90 w-50 p-15 flx flx-col flx-jc-sp flx-ai-ce txt-wht fade-t" id="welc">
             <h2 class="robo-blk" id="popHead">Lorem Ipsum</h2>
             <img alt="WelcSymbol" src="./img/symbol.png" class="w-50" id="symbol"/>
             <p class="lato w-80 txt-al-ce" id="popTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut in exercitationem. Ducimus inventore possimus laudantium, omnis voluptatibus assumenda tempora modi soluta aut autem, repellat alias architecto! Ad, vero voluptas.</p>
             
             <div id="jckptSymb" class="w-80 p-15 m-t-2 txt-drk flx flx-jc-ce flx-ai-ce bg-stat" style="display: none;">
-                <p class="robo-bld" id="balLabel">Balance</p>
-                <p class="robo-bld m-l-auto" id="balVal">6</p>
+                <p class="robo-bld balLabel">Balance</p>
+                <p class="robo-bld m-l-auto balVal">6</p>
             </div>
 
             <button class="btn btn-ylw robo-bld m-t-2" data-product-id="1" id="popBtn">Lorem ipsum</button>
@@ -65,6 +55,21 @@
         <img alt="loseML" src="./img/loseL.png" id="loseML" class="ml pos-abs" style="display: none;"/>
         <img alt="loseBR" src="./img/loseBR.png" id="loseBR" class="br pos-abs" style="display: none;"/>
         <img alt="loseTR" src="./img/loseTR.png" id="loseTR" class="tr pos-abs" style="display: none;"/>       
+    </div>
+
+    <div class="bg-low p-20 w-100 h-20 fade-b pos-abs flx flx-jc-ce flx flx-ai-ce z-mid" style="display: none;">
+        <div id="spins" class="txt-wht flx flx-col flx-jc-ce flx-ai-ce w-20">
+            <p class="robo-bld" id="spinLabel">Spins Left</p>
+            <p class="robo-bld scale" id="spinVal">6</p>
+        </div>
+        <div id="status" class="txt-wht flx flx-col flx-jc-ce flx-ai-ce w-20 m-l-auto m-r-auto">
+            <p class="robo-bld" id="statLabel">Total Wins</p>
+            <p class="robo-bld txt-ylw scale" id="statVal">6</p>
+        </div>
+        <div id="spins" class="flx flx-col flx-jc-ce flx-ai-ce w-20">
+            <p class="robo-bld balLabel txt-wht">Balance</p>
+            <p class="robo-bld balVal scale txt-ylw">6</p>
+        </div>
     </div>
 
     <small class="txt-wht lato txt-al-ce w-50 popTerm fade">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus necessitatibus quidem nemo repellat, deleniti, explicabo minus molestias cupiditate ducimus itaque id similique aliquam reiciendis magnam iusto ratione dolorum placeat ullam.</small>

@@ -24,13 +24,18 @@ const txt = {
     },
     stats:{
         spins:{
-            label:"SPINS LEFT",
+            label:"Spins Left",
             val:"6"
         },
-        balance:{
-            label:"BALANCE",
+        tot:{
+            label:"Wins/Loss",
             val:"0"
-        }
+        },
+        balance:{
+            label:"Balance",
+            val:"0"
+        },
+        spnBtn:"SPIN NOW"
     },
     terms:"This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience."
 }
