@@ -1,0 +1,93 @@
+
+@media only screen and (max-width: 1000px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small {
+   text-align: center !important;
+   width: 100% !important;
+  }
+
+  #symbol{
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+
+  .btn{
+    width: 80%!important;
+  }#welc{
+    width: 90%!important;
+  }
+
+  .statCont{
+    width: 100%!important;
+    align-items: center!important;
+    .bg-stat{
+      width: 80%!important;
+    }
+  }
+
+  #wheel{
+    width: calc( 70vw - 100px );
+  }#back{
+    width: calc( 75vw - 100px );
+  }#wheelPnt{
+    width: 10%;
+  }
+  
+}
+
+@media (max-width: 481px) {
+
+  #welc{
+    width: 90%!important;
+  }.btn{
+    width: 80%!important;
+  }
+
+  .bg-pop{
+    margin-top: 0;
+    top: 0;
+  }
+
+  .statCont{
+    width: 100%!important;
+    align-items: center!important;
+    z-index: 5;
+    .bg-stat{
+      width: 80%!important;
+    }
+  } 
+
+  .tl{
+    top: -5%!important;
+    left: -10%!important;
+  }.br{
+    bottom: -5%!important;
+    right: -8%!important;
+  }
+
+  #back{
+    width: 430px;
+  }#wheel{
+    width: 410px;
+  }#wheelBtn{
+    width: 25%;
+  }#wheelPnt{
+    width: 15%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) and (orientation: landscape) {
+}
+
+/* Portrait IPAD */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+}
+
+@media only screen and (min-width: 1400px) {
+}

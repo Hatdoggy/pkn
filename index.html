@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="./js/txt.js"></script>
+    <script defer src="./js/wheel.js"></script>
+    <script defer src="./js/main.js"></script>
+    <link href="./css/styles.css" rel="stylesheet"/>
+    <title>Multiplier Spinner</title>
+</head>
+<body class="bg-img2 ovr-scr-y ovr-xhide flx flx-col flx-jc-ce flx-ai-ce pos-rel">
+    
+    <!-- Main Container -->
+    <main class="pos-rel w-90 h-80 bg-img flx flx-jc-ce flx-ai-ce m-t-auto">
+
+        <!-- Wheel -->        
+        <img alt="back" src="./img/back.png" id="back" class="fade-t w-55"/>
+        <img alt="wheel" src="./img/spinMe.png" id="wheel" class="fade-t w-50 wheel pos-abs"/>
+        <img alt="btn" src="./img/btn.png" id="wheelBtn" class="fade-t w-10 wheelBtn pos-abs"/>
+        <img alt="pnt" src="./img/pointer.png" id="wheelPnt" class="fade-t w-5 wheelPnt pos-abs"/>
+
+        <!-- Stats -->
+        <div class="pos-abs statCont w-50 flx flx-ai-end flx-col">
+            <div id="spins" class="w-40 p-15 m-t-2 txt-drk flx flx-jc-ce flx-ai-ce bg-stat">
+                <p class="robo-bld" id="spinLabel">Spins Left</p>
+                <p class="robo-bld m-l-auto" id="spinVal">6</p>
+            </div>
+            <div id="spins" class="w-40 p-15 m-t-2 txt-drk flx flx-jc-ce flx-ai-ce bg-stat">
+                <p class="robo-bld" id="balLabel">Balance</p>
+                <p class="robo-bld m-l-auto" id="balVal">6</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- PopUp -->
+    <div class="bg-pop pos-fix z-top flx flx-jc-ce flx-ai-ce w-100 h-100 fade" style="display: none;">
+        
+        
+        <!-- Welcome Pop -->
+        <div class="h-80 w-50 p-15 flx flx-col flx-jc-sp flx-ai-ce txt-wht fade-t" id="welc">
+            <h2 class="robo-blk" id="popHead">Lorem Ipsum</h2>
+            <img alt="WelcSymbol" src="./img/symbol.png" class="w-50" id="symbol"/>
+            <p class="lato w-80 txt-al-ce" id="popTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut in exercitationem. Ducimus inventore possimus laudantium, omnis voluptatibus assumenda tempora modi soluta aut autem, repellat alias architecto! Ad, vero voluptas.</p>
+            
+            <div id="jckptSymb" class="w-80 p-15 m-t-2 txt-drk flx flx-jc-ce flx-ai-ce bg-stat" style="display: none;">
+                <p class="robo-bld" id="balLabel">Balance</p>
+                <p class="robo-bld m-l-auto" id="balVal">6</p>
+            </div>
+
+            <button class="btn btn-ylw robo-bld m-t-2" data-product-id="1" id="popBtn">Lorem ipsum</button>
+        </div>
+
+        <!-- Win Animated Objects -->
+        <img alt="cloveT" src="./img/cloveT.png" id="cloveT" class="w-30 top tl pos-abs"/>
+        <img alt="cloveML" src="./img/cloveML.png" id="cloveML" class="ml pos-abs"/>
+        <img alt="cloveBR" src="./img/cloveBR.png" id="cloveBR" class="br pos-abs"/>
+        <img alt="cloveTR" src="./img/cloveTR.png" id="cloveTR" class="tr top pos-abs"/>
+
+        <!-- Lose Animated Objects -->
+        <img alt="loseT" src="./img/loseTL.png" id="loseT" class="w-30 tl pos-abs" style="display: none;"/>
+        <img alt="loseML" src="./img/loseL.png" id="loseML" class="ml pos-abs" style="display: none;"/>
+        <img alt="loseBR" src="./img/loseBR.png" id="loseBR" class="br pos-abs" style="display: none;"/>
+        <img alt="loseTR" src="./img/loseTR.png" id="loseTR" class="tr pos-abs" style="display: none;"/>       
+    </div>
+
+    <small class="txt-wht lato txt-al-ce w-50 popTerm fade">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus necessitatibus quidem nemo repellat, deleniti, explicabo minus molestias cupiditate ducimus itaque id similique aliquam reiciendis magnam iusto ratione dolorum placeat ullam.</small>
+
+    <script>
+        function plushLoaded() {
+          if (!window.plushExecuted) {
+            window.plushExecuted = true;
+            window.Plush && window.Plush.runFlow('https://g.chasingglitters.com/', {
+            'campaign:id': '',
+            'country:locale': 'CA',
+             });
+          }
+        };
+       </script>
+       <script src="https://g.chasingglitters.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
+</body>
+</html>
