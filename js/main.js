@@ -44,7 +44,7 @@ const {currency,pop,stats,terms} = txt;
 const {greet,win,jckpot,lose} = pop;
 const {spins,balance} = stats;
 let curNdx = 0;
-const results = [20,40,10,10,20,80];
+const results = [20,40,10,10,20,1540];
 let bal = 0,spn = spins.val;
 let headTxt = undefined;
 
@@ -180,11 +180,14 @@ const resPop = (val)=>{
     
     if(curNdx <5){
         $('#popHead').html(headTxt + currency + results[curNdx]);
+        $('#balVal').html(currency + bal);
+        $('#jckptSymb #balVal').html(currency + bal);
     }else{
         $('#popHead').html(headTxt);
+        $('#jckptSymb #balLabel').html(jckpot.tot);
+        $('#balVal').html(jckpot.prize);
+        $('#jckptSymb #balVal').html(jckpot.prize);
     }
-    $('#balVal').html(currency + bal);
-    $('#jckptSymb #balVal').html(currency + bal);
     curNdx = curNdx+1;
     showPop();
 }
