@@ -13,8 +13,10 @@ const txt = {
         },
         jckpot:{
             head:"JACKPOT",
-            mes:"AMAZING! You won our Jackpot Prize click the button below to claim your prize",
-            btn:"CLAIM PRIZE"
+            mes:"AMAZING! You won our Jackpot Prize of 150 Bonus Spins + C$1600 click the button below to claim your prize",
+            btn:"CLAIM PRIZE",
+            tot:"Total",
+            prize:"150 Bonus Spins + C$1600"
         },
         lose:{
             head:"YOU LOST ",

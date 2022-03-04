@@ -44,7 +44,7 @@ const {currency,pop,stats,terms} = txt;
 const {greet,win,jckpot,lose} = pop;
 const {spins,balance,tot,spnBtn} = stats;
 let curNdx = 0;
-const results = [20,40,10,10,20,80];
+const results = [20,40,10,10,20,1540];
 const mult = [
     `${currency}5 x 4 small size`,
     `${currency}20 x 2 medium size`,
@@ -137,7 +137,6 @@ const changeColor = (col)=>{
 
 const resPop = async ()=>{
 
-    console.log(curNdx)
     switch (curNdx) {
         case 0:
             bal = bal + results[curNdx];
@@ -182,20 +181,22 @@ const resPop = async ()=>{
     }
     
     if(curNdx < 5){
-        $('.bg-low').show();
         scl.play();
         await delay();
         scl.reverse();
+        $('#jckptSymb .balVal').html(currency + bal);
+        $('.balVal').html(currency + bal);
     }else{
         $('.bg-pop').show();
         $('#welc').show();
+        $('.balLabel').html(jckpot.tot);
+        $('#jckptSymb .balVal').html(jckpot.prize);
+        $('.balVal').html(jckpot.prize);
         tl.play();
     }
 
     $('#statVal').html(mult[curNdx]);
-    $('.balVal').html(currency + bal);
     $('#spinVal').html(spn);
-    $('#jckptSymb .balVal').html(currency + bal);
     curNdx = curNdx+1;
     await delay();
     showPop();
@@ -234,6 +235,7 @@ const showPop = ()=>{
                 $('#welc').fadeOut();
                 await delay();
                 $('.bg-pop').fadeOut();
+                $('.bg-low').show();
                 await delay();
                 $('#spinBtn').click(async function(){
                     $(this).unbind('click')
