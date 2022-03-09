@@ -52,7 +52,7 @@
 }
 
 h1 {
-  font-size: clamp(2.5rem, 7vw, 7rem);
+  font-size: clamp(3.5rem, 7vw, 7rem);
 }
 h2 {
   font-size: clamp(2rem, 3vw, 3rem);
@@ -89,6 +89,12 @@ small {
 }
 .botTxt{
   bottom: -25%;
+}
+
+.countTxt{
+  color: #fff;
+text-shadow: 0 4px 0 #aa7b00,0 8px 2px rgba(0,0,0,.25);
+-webkit-text-stroke: 1px #bb8000;
 }
 
 .imgCont{

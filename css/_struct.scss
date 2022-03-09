@@ -354,6 +354,9 @@
 }
 
 .z {
+  &-test {
+    z-index: 90;
+  }
   &-top {
     z-index: 55;
   }

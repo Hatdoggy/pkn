@@ -52,6 +52,11 @@ const mult = [
     `-${currency}10 loss`,
     `${currency}5 x 4 small size`
 ];
+const options = {
+    decimalPlaces: 2,
+    duration: 1,
+};
+let cntUp = new countUp.CountUp("cntUp", results[curNdx],options)
 let bal = 0,spn = spins.val;
 let headTxt = undefined;
 
@@ -140,21 +145,36 @@ const resPop = async ()=>{
     switch (curNdx) {
         case 0:
             bal = bal + results[curNdx];
+            $('#cnt').show();
+            cntUp.start();
         break;
         case 1:
             bal = bal + results[curNdx];
+            cntUp.endVal = results[curNdx];
+            $('#cnt').show();
+            cntUp.start();
         break;
         case 2:
+            $('#dec').show();
             $('#statVal').removeClass('txt-ylw');
             $('#statVal').addClass('txt-red');
             $('.balVal').removeClass('txt-ylw');
             $('.balVal').addClass('txt-red');
             bal = bal - results[curNdx];
+            cntUp.endVal = results[curNdx];
+            $('#cnt').show();
+            cntUp.start();
         break;
         case 3:
             bal = bal - results[curNdx];
+            cntUp.endVal = results[curNdx];
+            $('#cnt').show();
+            cntUp.start();
         break;
         case 4:
+            cntUp.endVal = results[curNdx];
+            $('#cnt').show();
+            cntUp.start();
             $('#statVal').removeClass('txt-red');
             $('#statVal').addClass('txt-ylw');
             $('.balVal').removeClass('txt-red');
@@ -163,6 +183,9 @@ const resPop = async ()=>{
             bal = bal + results[curNdx];
         break;
         default:
+            cntUp.endVal = results[curNdx];
+            $('#cnt').show();
+            cntUp.start();
             $('#popHead').html(jckpot.head);
             $('#popTxt').html(jckpot.mes);
             $('#jckptSymb').show();
@@ -181,12 +204,22 @@ const resPop = async ()=>{
     }
     
     if(curNdx < 5){
+        await delay(2)
+        $('#cnt').fadeOut();
         scl.play();
         await delay();
+        if(curNdx === 3){
+            $('#dec').fadeOut();
+        }
+        cntUp.reset();
         scl.reverse();
         $('#jckptSymb .balVal').html(currency + bal);
         $('.balVal').html(currency + bal);
     }else{
+        await delay(2)
+        $('#cnt').fadeOut();
+        await delay();
+        $('#cnt').fadeOut();
         $('.bg-pop').show();
         $('#welc').show();
         $('.balLabel').html(jckpot.tot);
