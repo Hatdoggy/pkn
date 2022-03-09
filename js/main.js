@@ -155,6 +155,8 @@ const resPop = async ()=>{
             cntUp.start();
         break;
         case 2:
+            $('#cnt').removeClass('countTxt');
+            $('#cnt').addClass('lseTxt');
             $('#dec').show();
             $('#statVal').removeClass('txt-ylw');
             $('#statVal').addClass('txt-red');
@@ -172,6 +174,8 @@ const resPop = async ()=>{
             cntUp.start();
         break;
         case 4:
+            $('#cnt').removeClass('lseTxt');
+            $('#cnt').addClass('countTxt');
             cntUp.endVal = results[curNdx];
             $('#cnt').show();
             cntUp.start();
@@ -215,6 +219,11 @@ const resPop = async ()=>{
         scl.reverse();
         $('#jckptSymb .balVal').html(currency + bal);
         $('.balVal').html(currency + bal);
+        $('#statVal').html(mult[curNdx]);
+        $('#spinVal').html(spn);
+        curNdx = curNdx+1;
+        await delay();
+        showPop();
     }else{
         await delay(2)
         $('#cnt').fadeOut();
@@ -228,11 +237,6 @@ const resPop = async ()=>{
         tl.play();
     }
 
-    $('#statVal').html(mult[curNdx]);
-    $('#spinVal').html(spn);
-    curNdx = curNdx+1;
-    await delay();
-    showPop();
 }
 
 const setText = ()=>{
@@ -245,9 +249,6 @@ const setText = ()=>{
     $('#statLabel').html(tot.label);
     $('#statVal').html(tot.val);
 
-    // Spin Button
-    $('#spinBtn').html(spnBtn)
-
     // Welcome Pop
     $('#popHead').html(greet.head);
     $('#popTxt').html(greet.mes);
@@ -257,7 +258,7 @@ const setText = ()=>{
     $('.popTerm').html(terms)
 }
 
-const showPop = ()=>{
+const showPop = async()=>{
 
     if(curNdx === 0){
         // Set welcomeBtn
@@ -269,23 +270,19 @@ const showPop = ()=>{
                 await delay();
                 $('.bg-pop').fadeOut();
                 $('.bg-low').show();
-                await delay();
-                $('#spinBtn').click(async function(){
+                await delay(2);
+                // First spin
                     $(this).unbind('click')
                     spn = spn -1;
                     $('#spinVal').html(spn);
                     await spin()
                     resPop();
-                })
             })
     }else{
-        // Set spinBtn
-        $('#spinBtn').click(async function(){
-            $(this).unbind('click')
-            spn = spn - 1;
-            await spin()
-            resPop();
-        })
+        // spin after every turn
+        spn = spn - 1;
+        await spin()
+        resPop();
     }
 
 }

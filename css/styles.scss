@@ -18,6 +18,12 @@
   font-family: $lato;
 }
 
+.lseTxt{
+  color: #ff0f0f;
+  text-shadow: 0 4px 0 #000, 0 8px 2px rgba(26, 36, 10, 0.61);
+  -webkit-text-stroke: 2px #fff;
+}
+
 .wheel{
   z-index: 1;
 }.wheelBtn,.wheelPnt{
