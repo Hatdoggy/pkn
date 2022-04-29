@@ -44,13 +44,13 @@ const {currency,pop,stats,terms} = txt;
 const {greet,win,jckpot,lose} = pop;
 const {spins,balance,tot,spnBtn} = stats;
 let curNdx = 0;
-const results = [20,40,10,10,20,1540];
+const results = [20,200,10,10,100,1200];
 const mult = [
     `${currency}5 x 4 small size`,
-    `${currency}20 x 2 medium size`,
+    `${currency}20 x 10 big size`,
     `- ${currency}10 loss`,
     `-${currency}10 loss`,
-    `${currency}5 x 4 small size`
+    `${currency}10 x 10 big size`
 ];
 const options = {
     decimalPlaces: 2,
@@ -199,7 +199,7 @@ const resPop = async ()=>{
             $('.balVal').removeClass('txt-ylw');
             $('.balVal').addClass('txt-drk');
             $('#popBtn').html(jckpot.btn);
-            $('#symbol').attr('src','./img/jackpot.png');
+            $('#symbol').attr('src','./imgLuck/jackpot.png');
             $('#popBtn').click(function(){
                 ActionRedirect($(this).data('product-id'))
             })

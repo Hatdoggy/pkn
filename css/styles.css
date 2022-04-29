@@ -662,7 +662,7 @@ span {
 }
 
 .txt-ylw {
-  color: #FEC935;
+  color: #68FFB8;
 }
 
 /* button*/
@@ -683,14 +683,14 @@ span {
 }
 
 .btn-ylw {
-  background: #FEC935;
-  color: white;
+  background: #68FFB8;
+  color: #1F4219;
 }
 
 .btn-jckpt {
-  background: #FEC935;
-  -webkit-box-shadow: 0px 0px 25px #FEC935;
-          box-shadow: 0px 0px 25px #FEC935;
+  background: #68FFB8;
+  -webkit-box-shadow: 0px 0px 25px #68FFB8;
+          box-shadow: 0px 0px 25px #68FFB8;
   color: #1F4219;
 }
 
@@ -767,7 +767,7 @@ span {
 }
 
 .bg-img {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../imgLuck/bg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -776,20 +776,20 @@ span {
 }
 
 .bg-img2 {
-  background-image: url("../img/mainbg.jpg");
+  background-image: url("../imgLuck/mainbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg-stat {
-  background-color: #FFEEC2;
+  background-color: white;
   -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.45);
           box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.45);
   border-radius: 15px;
 }
 
 .bg-popCont {
-  background-color: #FFEEC2;
+  background-color: white;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
   border-radius: 25px;
@@ -1136,7 +1136,7 @@ span {
 }
 
 .lseTxt {
-  color: #ff0f0f;
+  color: #a52c1b;
   text-shadow: 0 4px 0 #000, 0 8px 2px rgba(26, 36, 10, 0.61);
   -webkit-text-stroke: 2px #fff;
 }
@@ -1236,8 +1236,8 @@ small {
 
 .countTxt {
   color: #fff;
-  text-shadow: 0 4px 0 #aa7b00, 0 8px 2px rgba(0, 0, 0, 0.25);
-  -webkit-text-stroke: 1px #bb8000;
+  text-shadow: 0 4px 0 #3C9A6E, 0 8px 2px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #015A66;
 }
 
 .imgCont {
@@ -1421,16 +1421,16 @@ small {
     transform: rotate(0);
   }
   90% {
-    -webkit-transform: rotate(3025deg);
-    transform: rotate(3025deg);
+    -webkit-transform: rotate(2980deg);
+    transform: rotate(2980deg);
   }
   95% {
-    -webkit-transform: rotate(3014deg);
-    transform: rotate(3014deg);
+    -webkit-transform: rotate(2969deg);
+    transform: rotate(2969deg);
   }
   100% {
-    -webkit-transform: rotate(3015deg);
-    transform: rotate(3015deg);
+    -webkit-transform: rotate(2970deg);
+    transform: rotate(2970deg);
   }
 }
 
@@ -1448,8 +1448,8 @@ small {
 
 @-webkit-keyframes spin6 {
   0% {
-    -webkit-transform: rotate(3015deg);
-    transform: rotate(3015deg);
+    -webkit-transform: rotate(2970deg);
+    transform: rotate(2970deg);
   }
   90% {
     -webkit-transform: rotate(7210deg);

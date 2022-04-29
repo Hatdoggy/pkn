@@ -19,7 +19,7 @@
 }
 
 .lseTxt{
-  color: #ff0f0f;
+  color: #a52c1b;
   text-shadow: 0 4px 0 #000, 0 8px 2px rgba(26, 36, 10, 0.61);
   -webkit-text-stroke: 2px #fff;
 }
@@ -99,8 +99,8 @@ small {
 
 .countTxt{
   color: #fff;
-text-shadow: 0 4px 0 #aa7b00,0 8px 2px rgba(0,0,0,.25);
--webkit-text-stroke: 1px #bb8000;
+text-shadow: 0 4px 0 #3C9A6E,0 8px 2px rgba(0,0,0,.25);
+-webkit-text-stroke: 1px #015A66;
 }
 
 .imgCont{
@@ -290,19 +290,19 @@ text-shadow: 0 4px 0 #aa7b00,0 8px 2px rgba(0,0,0,.25);
     transform: rotate(0);
   }
   90% {
-    -webkit-transform: rotate(3025deg);
-    -ms-transform: rotate(3025deg);
-    transform: rotate(3025deg);
+    -webkit-transform: rotate(2980deg);
+    -ms-transform: rotate(2980deg);
+    transform: rotate(2980deg);
   }
   95% {
-    -webkit-transform: rotate(3014deg);
-    -ms-transform: rotate(3014deg);
-    transform: rotate(3014deg);
+    -webkit-transform: rotate(2969deg);
+    -ms-transform: rotate(2969deg);
+    transform: rotate(2969deg);
   }
   100% {
-    -webkit-transform: rotate(3015deg);
-    -ms-transform: rotate(3015deg);
-    transform: rotate(3015deg);
+    -webkit-transform: rotate(2970deg);
+    -ms-transform: rotate(2970deg);
+    transform: rotate(2970deg);
   }
 }
 
@@ -319,9 +319,9 @@ text-shadow: 0 4px 0 #aa7b00,0 8px 2px rgba(0,0,0,.25);
 }
 @-webkit-keyframes spin6 {
   0% {
-    -webkit-transform: rotate(3015deg);
-    -ms-transform: rotate(3015deg);
-    transform: rotate(3015deg);
+    -webkit-transform: rotate(2970deg);
+    -ms-transform: rotate(2970deg);
+    transform: rotate(2970deg);
   }
   90% {
     -webkit-transform: rotate(7210deg);

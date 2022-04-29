@@ -1,8 +1,8 @@
 const txt = {
-    currency:"$",
+    currency:"C$",
     pop:{
         greet:{
-            head:"Welcome to the Multiplier Spinner",
+            head:"Welcome to the LuckyDays Multiplier Spinner",
             mes:"Get a chance to win cash prizes and a chance to double, triple, and quadruple you winnings in one SPIN! Click the button to start the spin",
             btn:"Let's Start!"
         },
@@ -13,10 +13,10 @@ const txt = {
         },
         jckpot:{
             head:"JACKPOT",
-            mes:"AMAZING! You won our Jackpot Prize of 150 Bonus Spins + C$1600 click the button below to claim your prize",
+            mes:"AMAZING! You won our Jackpot Prize of 1500CAD + 100 Free Spins click the button below to claim your prize",
             btn:"CLAIM PRIZE",
             tot:"Total",
-            prize:"150 Bonus Spins + C$1600"
+            prize:"1500CAD + 100 Free Spins"
         },
         lose:{
             head:"YOU LOST ",

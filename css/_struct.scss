@@ -425,7 +425,7 @@
   }
   &-ylw {
     background: $btn;
-    color: $wht;
+    color: $txt;
   }
   &-jckpt {
     background: $btn;
@@ -496,24 +496,24 @@
     bottom: 0;
   }
   &-img {
-    background-image: url("../img/bg.jpg");
+    background-image: url("../imgLuck/bg2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
   }
   &-img2 {
-    background-image: url("../img/mainbg.jpg");
+    background-image: url("../imgLuck/mainbg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
   &-stat{
-    background-color: $bck;
+    background-color: $wht;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.45);
     border-radius: 15px;
   }
   &-popCont{
-    background-color: $bck;
+    background-color: $wht;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
     border-radius: 25px;
   }
