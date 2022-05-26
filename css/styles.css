@@ -654,15 +654,15 @@ span {
 }
 
 .txt-drk {
-  color: #1F4219;
+  color: #45408C;
 }
 
 .txt-red {
-  color: #FE3535;
+  color: #ff2957;
 }
 
 .txt-ylw {
-  color: #68FFB8;
+  color: #bc85fc;
 }
 
 /* button*/
@@ -679,19 +679,19 @@ span {
 
 .btn-wht {
   background-color: white;
-  color: #1F4219 !important;
+  color: #45408C !important;
 }
 
 .btn-ylw {
-  background: #68FFB8;
-  color: #1F4219;
+  background: #bc85fc;
+  color: white;
 }
 
 .btn-jckpt {
-  background: #68FFB8;
-  -webkit-box-shadow: 0px 0px 25px #68FFB8;
-          box-shadow: 0px 0px 25px #68FFB8;
-  color: #1F4219;
+  background: #bc85fc;
+  -webkit-box-shadow: 0px 0px 25px #bc85fc;
+          box-shadow: 0px 0px 25px #bc85fc;
+  color: white;
 }
 
 .btn-red {
@@ -767,7 +767,7 @@ span {
 }
 
 .bg-img {
-  background-image: url("../imgLuck/bg2.jpg");
+  background-image: url("../imgCas/bg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -776,7 +776,7 @@ span {
 }
 
 .bg-img2 {
-  background-image: url("../imgLuck/mainbg.jpg");
+  background-image: url("../imgCas/mainbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1136,7 +1136,7 @@ span {
 }
 
 .lseTxt {
-  color: #a52c1b;
+  color: #ff2957;
   text-shadow: 0 4px 0 #000, 0 8px 2px rgba(26, 36, 10, 0.61);
   -webkit-text-stroke: 2px #fff;
 }
@@ -1236,8 +1236,8 @@ small {
 
 .countTxt {
   color: #fff;
-  text-shadow: 0 4px 0 #3C9A6E, 0 8px 2px rgba(0, 0, 0, 0.25);
-  -webkit-text-stroke: 1px #015A66;
+  text-shadow: 0 4px 0 #544EAB, 0 8px 2px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #544EAB;
 }
 
 .imgCont {

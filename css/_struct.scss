@@ -404,7 +404,7 @@
     color: $txt;
   }
   &-red{
-    color: $red;
+    color: #ff2957;
   }
   &-ylw{
     color: $btn;
@@ -425,12 +425,12 @@
   }
   &-ylw {
     background: $btn;
-    color: $txt;
+    color: $wht;
   }
   &-jckpt {
     background: $btn;
     box-shadow: 0px 0px 25px $btn;
-    color: $txt;
+    color: $wht;
   }
   &-red {
     background: $red;
@@ -496,14 +496,14 @@
     bottom: 0;
   }
   &-img {
-    background-image: url("../imgLuck/bg2.jpg");
+    background-image: url("../imgCas/bg2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
   }
   &-img2 {
-    background-image: url("../imgLuck/mainbg.jpg");
+    background-image: url("../imgCas/mainbg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
