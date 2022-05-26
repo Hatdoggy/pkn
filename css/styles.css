@@ -654,7 +654,7 @@ span {
 }
 
 .txt-drk {
-  color: #45408C;
+  color: #3B3883;
 }
 
 .txt-red {
@@ -662,7 +662,7 @@ span {
 }
 
 .txt-ylw {
-  color: #bc85fc;
+  color: #6054CD;
 }
 
 /* button*/
@@ -679,18 +679,18 @@ span {
 
 .btn-wht {
   background-color: white;
-  color: #45408C !important;
+  color: #3B3883 !important;
 }
 
 .btn-ylw {
-  background: #bc85fc;
+  background: #6054CD;
   color: white;
 }
 
 .btn-jckpt {
-  background: #bc85fc;
-  -webkit-box-shadow: 0px 0px 25px #bc85fc;
-          box-shadow: 0px 0px 25px #bc85fc;
+  background: #6054CD;
+  -webkit-box-shadow: 0px 0px 25px #6054CD;
+          box-shadow: 0px 0px 25px #6054CD;
   color: white;
 }
 
@@ -767,7 +767,7 @@ span {
 }
 
 .bg-img {
-  background-image: url("../imgCas/bg2.jpg");
+  background-image: url("../imgWolf/bg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -776,7 +776,7 @@ span {
 }
 
 .bg-img2 {
-  background-image: url("../imgCas/mainbg.jpg");
+  background-image: url("../imgWolf/mainbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

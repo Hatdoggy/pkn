@@ -2,8 +2,8 @@ const txt = {
     currency:"$",
     pop:{
         greet:{
-            head:"Welcome to the Casino Days Multiplier Spinner",
-            mes:"Get a chance to win cash prizes and a chance to double, triple, and quadruple you winnings in one SPIN! Click the button to start the spin",
+            head:"Welcome to the Wolf Gold Multiplier Spinner",
+            mes:"Get a chance to win wolf gold and a chance to double, triple, and quadruple your winnings with just one SPIN! Click the button to start the spin",
             btn:"Let's Start!"
         },
         win:{
@@ -12,8 +12,8 @@ const txt = {
             btn:"SPIN AGAIN"
         },
         jckpot:{
-            head:"JACKPOT",
-            mes:"AMAZING! You won our Jackpot Prize of $1,000 + 100 Free Spins click the button below to claim your prize",
+            head:"CONGRATULATIONS!",
+            mes:"You won our Wolf Gold Jackpot Prize of $1,000 + 100 Free Spins click the button below to claim your prize",
             btn:"CLAIM PRIZE",
             tot:"Total",
             prize:"$1,000 + 100 Free Spins"
@@ -34,7 +34,7 @@ const txt = {
             val:"0"
         },
         balance:{
-            label:"Balance",
+            label:"Wolf Gold",
             val:"0"
         },
         spnBtn:"SPIN NOW"

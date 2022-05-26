@@ -199,7 +199,7 @@ const resPop = async ()=>{
             $('.balVal').removeClass('txt-ylw');
             $('.balVal').addClass('txt-drk');
             $('#popBtn').html(jckpot.btn);
-            $('#symbol').attr('src','./imgCas/jackpot.png');
+            $('#symbol').attr('src','./imgWolf/jackpot.png');
             $('#popBtn').click(function(){
                 ActionRedirect($(this).data('product-id'))
             })
